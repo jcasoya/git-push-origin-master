@@ -1,14 +1,5 @@
-<div class="container pt-3">
-  <h1><%= @task.title %></h1>
-  <p class="well"><%= @task.details %></p>
+<h1>TASKS</h1>
 
-  <% if @task.completed %>
-    <i class="fa fa-check-square-o"></i> This task is completed
-  <% else %>
-    <i class="fa fa-square-o"></i> This task is not completed yet
-  <% end %>
-  <%= link_to tasks_path do %>
-    <br>
-    <i class="fa fa-history"></i> Back to list
-  <% end %>
-</div>
+<% @tasks.each do |task| %>
+  <h3> <%= task.title %> </h3>
+<% end %>
